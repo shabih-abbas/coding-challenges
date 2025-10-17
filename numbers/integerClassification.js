@@ -1,7 +1,13 @@
 /*
 Rosetta Code Challenge # 5
-Problem: Implement a function that calculates how many of the integers from 1 to num (inclusive) are in each of the three classes. Output the result as an array in the following format [deficient, perfect, abundant]
+Problem: Implement a function that calculates how many of the integers from 1 to num (inclusive) are in each of the three classes. 
+Output the result as an array in the following format [deficient, perfect, abundant].
+Let P(n) be the sum of the proper divisors of n where proper divisors are all positive integers n other than n itself.
+- If P(n) < n then n is classed as deficient
+- If P(n) === n then n is classed as perfect
+- If P(n) > n then n is classed as abundant
 */
+
 function getDPA(num) {
   var classification = [0, 0, 0];
   for (let n = 1; n <= num; n++) {
